@@ -1,0 +1,31 @@
+{
+  "name": "javascript-mini-projects",
+  "version": "1.0.0",
+  "description": "javascript-mini-projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "victor": "npx @tailwindcss/cli -i ./input.css -o ./output.css --watch"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Victor-Olumide/javascript-mini-projects.git"
+  },
+  "keywords": [
+    "tailwindcss",
+    "css",
+    "javascript",
+    "projects"
+  ],
+  "author": "victor-olumide",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Victor-Olumide/javascript-mini-projects/issues"
+  },
+  "homepage": "https://github.com/Victor-Olumide/javascript-mini-projects#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.12",
+    "tailwindcss": "^4.1.12"
+  }
+}
