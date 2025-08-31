@@ -1,1 +1,69 @@
 @import "tailwindcss";
+
+@layer base {
+    body {
+        @apply bg-[#202124] m-0 p-0;
+    }
+}
+
+@layer components {
+    .calculator-container {
+        @apply w-[600px] mx-auto mt-15 mb-15 bg-neutral-800 rounded-2xl pt-6 px-[18px] pb-[18px]
+    }
+
+    .calculator-container input {
+        @apply w-full h-20 bg-[#202124] text-white border-none rounded-lg text-[2rem] text-right px-4 mb-[18px] box-border outline-none
+    }
+
+    .calculator-container div {
+        @apply flex justify-between mb-3
+    }
+
+    .calculator-container button {
+        @apply flex-1 flex justify-center items-center mx-1 h-12 bg-neutral-700 active:bg-neutral-800 text-white border-none rounded-2xl text-[1.2rem] cursor-pointer transition-colors duration-200
+    }
+
+    .calc-btn.operator {
+        @apply bg-sky-950 
+    }
+
+    .calc-btn.equal {
+        @apply text-[#202124]
+    }
+}
+
+@media (max-width: 900px) {
+    .calculator-container {
+        @apply w-[90vw] min-w-[280px] pt-4 px-2 pb-2;
+    }
+    .calculator-container input {
+        @apply h-14 text-[1.5rem] px-2 mb-4;
+    }
+    .calculator-container div {
+        @apply h-12 text-[1.2rem] px-2;
+    }
+    .calculator-container button {
+        @apply h-10 text-[1rem] mx-1;
+    }
+    .calc-btn {
+        @apply h-10 text-[1rem];
+    }
+}
+
+@media (max-width: 600px) {
+    .calculator-container {
+        @apply w-[90vw] mt-4 mx-auto p-2 px-1 pb-2 rounded-lg;
+    }
+    .calculator-container input {
+        @apply h-12 text-[1rem] mb-2;
+    }
+    .calculator-container div {
+        @apply h-10 text-[1rem] px-1;
+    }
+    .calculator-container button {
+        @apply h-8 text-[0.95rem] mb-1 mx-1 rounded-lg;
+    }
+    .calc-btn {
+        @apply h-8 text-[0.95rem] mx-1 rounded-lg;
+    }
+}
