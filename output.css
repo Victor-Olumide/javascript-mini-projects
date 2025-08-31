@@ -1,4 +1,5 @@
 /*! tailwindcss v4.1.12 | MIT License | https://tailwindcss.com */
+@layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -6,6 +7,15 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-sky-950: oklch(29.3% 0.066 243.157);
+    --color-neutral-700: oklch(37.1% 0 0);
+    --color-neutral-800: oklch(26.9% 0 0);
+    --color-white: #fff;
+    --spacing: 0.25rem;
+    --radius-lg: 0.5rem;
+    --radius-2xl: 1rem;
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -158,4 +168,153 @@
     display: none !important;
   }
 }
-@layer utilities;
+@layer utilities {
+  .size-6 {
+    width: calc(var(--spacing) * 6);
+    height: calc(var(--spacing) * 6);
+  }
+}
+@layer base {
+  body {
+    margin: calc(var(--spacing) * 0);
+    background-color: #202124;
+    padding: calc(var(--spacing) * 0);
+  }
+}
+@layer components {
+  .calculator-container {
+    margin-inline: auto;
+    margin-top: calc(var(--spacing) * 15);
+    margin-bottom: calc(var(--spacing) * 15);
+    width: 600px;
+    border-radius: var(--radius-2xl);
+    background-color: var(--color-neutral-800);
+    padding-inline: 18px;
+    padding-top: calc(var(--spacing) * 6);
+    padding-bottom: 18px;
+  }
+  .calculator-container input {
+    margin-bottom: 18px;
+    box-sizing: border-box;
+    height: calc(var(--spacing) * 20);
+    width: 100%;
+    border-radius: var(--radius-lg);
+    --tw-border-style: none;
+    border-style: none;
+    background-color: #202124;
+    padding-inline: calc(var(--spacing) * 4);
+    text-align: right;
+    font-size: 2rem;
+    color: var(--color-white);
+    --tw-outline-style: none;
+    outline-style: none;
+  }
+  .calculator-container div {
+    margin-bottom: calc(var(--spacing) * 3);
+    display: flex;
+    justify-content: space-between;
+  }
+  .calculator-container button {
+    margin-inline: calc(var(--spacing) * 1);
+    display: flex;
+    height: calc(var(--spacing) * 12);
+    flex: 1;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-2xl);
+    --tw-border-style: none;
+    border-style: none;
+    background-color: var(--color-neutral-700);
+    font-size: 1.2rem;
+    color: var(--color-white);
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+    --tw-duration: 200ms;
+    transition-duration: 200ms;
+    &:active {
+      background-color: var(--color-neutral-800);
+    }
+  }
+  .calc-btn.operator {
+    background-color: var(--color-sky-950);
+  }
+  .calc-btn.equal {
+    color: #202124;
+  }
+}
+@media (max-width: 900px) {
+  .calculator-container {
+    width: 90vw;
+    min-width: 280px;
+    padding-inline: calc(var(--spacing) * 2);
+    padding-top: calc(var(--spacing) * 4);
+    padding-bottom: calc(var(--spacing) * 2);
+  }
+  .calculator-container input {
+    margin-bottom: calc(var(--spacing) * 4);
+    height: calc(var(--spacing) * 14);
+    padding-inline: calc(var(--spacing) * 2);
+    font-size: 1.5rem;
+  }
+  .calculator-container div {
+    height: calc(var(--spacing) * 12);
+    padding-inline: calc(var(--spacing) * 2);
+    font-size: 1.2rem;
+  }
+  .calculator-container button {
+    margin-inline: calc(var(--spacing) * 1);
+    height: calc(var(--spacing) * 10);
+    font-size: 1rem;
+  }
+  .calc-btn {
+    height: calc(var(--spacing) * 10);
+    font-size: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .calculator-container {
+    margin-inline: auto;
+    margin-top: calc(var(--spacing) * 4);
+    width: 90vw;
+    border-radius: var(--radius-lg);
+    padding: calc(var(--spacing) * 2);
+    padding-inline: calc(var(--spacing) * 1);
+    padding-bottom: calc(var(--spacing) * 2);
+  }
+  .calculator-container input {
+    margin-bottom: calc(var(--spacing) * 2);
+    height: calc(var(--spacing) * 12);
+    font-size: 1rem;
+  }
+  .calculator-container div {
+    height: calc(var(--spacing) * 10);
+    padding-inline: calc(var(--spacing) * 1);
+    font-size: 1rem;
+  }
+  .calculator-container button {
+    margin-inline: calc(var(--spacing) * 1);
+    margin-bottom: calc(var(--spacing) * 1);
+    height: calc(var(--spacing) * 8);
+    border-radius: var(--radius-lg);
+    font-size: 0.95rem;
+  }
+  .calc-btn {
+    margin-inline: calc(var(--spacing) * 1);
+    height: calc(var(--spacing) * 8);
+    border-radius: var(--radius-lg);
+    font-size: 0.95rem;
+  }
+}
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-duration: initial;
+    }
+  }
+}
