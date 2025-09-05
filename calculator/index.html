@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Calculator</title>
+    <link rel="stylesheet" href="./output.css" />
+    <script src="./calculator.js" defer></script>
+</head>
+
+<body class="calculator">
+    <main class="calculator-container">
+        <form name="form1" autocomplete="off" onsubmit="return false;">
+            <input type="text" name="answer" placeholder="0" readonly />
+            <div>
+                <button type="button" onclick="appendToDisplay('(')">
+                    (
+                </button>
+                <button type="button" onclick="appendToDisplay(')')">
+                    )
+                </button>
+                <button type="button" class="calc-btn operator"
+                    onclick="form1.answer.value = form1.answer.value.slice(0, -1)">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 9.75 14.25 12m0 0 2.25 2.25M14.25 12l2.25-2.25M14.25 12 12 14.25m-2.58 4.92-6.374-6.375a1.125 1.125 0 0 1 0-1.59L9.42 4.83c.21-.211.497-.33.795-.33H19.5a2.25 2.25 0 0 1 2.25 2.25v10.5a2.25 2.25 0 0 1-2.25 2.25h-9.284c-.298 0-.585-.119-.795-.33Z" />
+                    </svg>
+
+                </button>
+                <button type="button" class="calc-btn operator" onclick="form1.answer.value = ''">
+                    AC
+                </button>
+            </div>
+
+            <div>
+                <button type="button" onclick="appendToDisplay('7')">
+                    7
+                </button>
+                <button type="button" onclick="appendToDisplay('8')">
+                    8
+                </button>
+                <button type="button" onclick="appendToDisplay('9')">
+                    9
+                </button>
+                <button type="button" class="calc-btn operator" onclick="appendToDisplay('/')">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.499 11.998h15m-7.5-6.75h.008v.008h-.008v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM12 18.751h.007v.007H12v-.007Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                    </svg>
+
+                </button>
+            </div>
+
+            <div>
+                <button type="button" onclick="appendToDisplay('4')">
+                    4
+                </button>
+                <button type="button" onclick="appendToDisplay('5')">
+                    5
+                </button>
+                <button type="button" onclick="appendToDisplay('6')">
+                    6
+                </button>
+                <button type="button" class="calc-btn operator" onclick="appendToDisplay('*')">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+
+                </button>
+            </div>
+
+            <div>
+                <button type="button" onclick="appendToDisplay('1')">
+                    1
+                </button>
+                <button type="button" onclick="appendToDisplay('2')">
+                    2
+                </button>
+                <button type="button" onclick="appendToDisplay('3')">
+                    3
+                </button>
+                <button type="button" class="calc-btn operator" onclick="appendToDisplay('-')">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
+                    </svg>
+
+                </button>
+            </div>
+
+            <div>
+                <button type="button" onclick="appendToDisplay('0')">
+                    0
+                </button>
+                <button type="button" class="calc-btn operator" onclick="appendToDisplay('.')">
+                    .
+                </button>
+                <button type="button" class="calc-btn equal" onclick="Calculate()">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.499 8.248h15m-15 7.501h15" />
+                    </svg>
+
+                </button>
+                <button type="button" class="calc-btn operator" onclick="appendToDisplay('+')">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                    </svg>
+
+                </button>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>
