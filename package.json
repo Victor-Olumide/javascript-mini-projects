@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "victor": "npx @tailwindcss/cli -i ./input.css -o ./output.css --watch"
-
+    "victor": "npx @tailwindcss/cli -i ./input.css -o ./output.css --watch",
+    "deploy": "gh-pages -d .",
+  "copy": "cp ./output.css ./roman-numeral-converter/output.css && cp ./output.css ./calculator/output.css && cp ./output.css ./countdown-timer/output.css && cp ./output.css ./todo-list/output.css && cp ./output.css ./digital-clock/output.css"
   },
   "repository": {
     "type": "git",
@@ -27,5 +28,8 @@
   "dependencies": {
     "@tailwindcss/cli": "^4.1.12",
     "tailwindcss": "^4.1.12"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
