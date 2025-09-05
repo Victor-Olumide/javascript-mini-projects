@@ -1,36 +1,156 @@
 @import "tailwindcss";
 
-@layer base {
-    body {
-        @apply bg-[#202124] m-0 p-0;
-    }
-}
-
 @layer components {
+    .calculator{
+         @apply bg-[#202124] m-0 p-0;
+    }
     .calculator-container {
         @apply w-[600px] mx-auto mt-15 mb-15 bg-neutral-800 rounded-2xl pt-6 px-[18px] pb-[18px]
     }
-
     .calculator-container input {
         @apply w-full h-20 bg-[#202124] text-white border-none rounded-lg text-[2rem] text-right px-4 mb-[18px] box-border outline-none
     }
-
     .calculator-container div {
         @apply flex justify-between mb-3
     }
-
     .calculator-container button {
         @apply flex-1 flex justify-center items-center mx-1 h-12 bg-neutral-700 active:bg-neutral-800 text-white border-none rounded-2xl text-[1.2rem] cursor-pointer transition-colors duration-200
     }
-
     .calc-btn.operator {
         @apply bg-sky-950 
     }
-
     .calc-btn.equal {
         @apply text-[#202124]
     }
+
+
+
+    .clock{
+        @apply h-screen bg-gradient-to-br from-[#852B37]  via-[#AD3747]  to-[#381013] flex flex-col items-center justify-center gap-y-6;
+    }
+    .clock h1{
+        @apply uppercase font-bold text-5xl text-white tracking-[38px] ;
+    }
+    .clock section{
+        @apply md:gap-10 gap-2 flex items-center justify-center text-white;
+    }
+     .clock div{
+        @apply flex flex-col w-[250px]  items-center mt-6 border-2 border-white/50 rounded-2xl bg-[#7C2833];
+    }
+    .clock div:nth-of-type(2){
+        @apply bg-[#C03D4F]
+    }
+    .clock div span:first-of-type{
+        @apply  text-9xl font-medium  w-full h-40 flex justify-center  items-center;
+    }
+    .clock div span:last-of-type{
+        @apply text-base w-full h-10 flex justify-center  items-center;
+    }
+    .clock article {
+        @apply flex gap-x-6 text-xl mt-4 ;
+    }
+    .clock button {
+        @apply bg-transparent hover:bg-[#C03D4F] px-4 py-2 border-2 border-white/50 rounded-xl cursor-pointer transition-colors duration-200 flex gap-x-2;
+    }
+    .clock section span {
+        @apply text-2xl ml-4;
+    }
+
+
+
+    .countdown{
+        @apply h-screen bg-gradient-to-t from-[#1D5339] to-[#A1EA65] flex flex-col items-center justify-center;
+    }
+    .countdown h1{
+        @apply uppercase font-bold text-5xl text-white tracking-[38px];
+    }
+    .countdown section{
+        @apply grid md:grid-cols-4 grid-cols-1 md:gap-10 gap-2 text-white;
+    }
+    .countdown section div{
+        @apply flex flex-col w-[150px] items-center mt-6 bg-[#273623] rounded-2xl py-4 ;
+    }
+    .countdown span:first-of-type{
+        @apply   text-base font-semibold capitalize uppercase w-full  flex items-center justify-center;
+    }
+    .countdown span:last-of-type{
+        @apply text-7xl font-semibold w-full h-20 flex items-center justify-center;
+    }
+    .countdown article{
+        @apply flex items-center justify-end-safe gap-x-6 mt-6 px-6 w-full text-white;
+    }
+    .countdown article h2{
+        @apply text-lg font-semibold;
+    }
+    .countdown input{
+        @apply mt-6 mb-4 bg-white text-black rounded-lg p-2 text-center;
+    }
+    .countdown input:focus{
+        @apply outline-none ring-2 ring-[#1D5339];
+    }
+    .countdown button{
+        @apply bg-transparent px-6 py-2 rounded-lg font-semibold hover:bg-[#2d865b] border-2 border-white/50 cursor-pointer transition-colors duration-200;
+    }
+
+
+    .converter{
+            @apply m-0 p-0 bg-slate-100 text-black flex items-center justify-center
+        }
+    .converter-container{
+        @apply mx-auto my-15 rounded-2xl pt-6 px-[18px] pb-[18px] flex flex-col gap-x-12;
+    }
+    .converter-container h1{
+        @apply text-4xl font-bold text-center mb-6;
+    }
+    .converter-container h2{
+        @apply text-2xl font-bold;
+    }
+    .converter-container div {
+        @apply m-4 p-10 gap-x-2 w-[600px] flex flex-col bg-white text-lg rounded-xl shadow-lg shadow-slate-400/50;
+    }
+    .converter-container section{
+        @apply flex flex-row gap-x-4 mt-2
+    }
+    .converter-container input {
+        @apply w-3/5 h-10 border-black/50 border-2 rounded-lg px-2 mb-2 outline-none;
+    }
+    .converter-container button {
+        @apply w-2/5 h-10 bg-orange-600 text-white border-none rounded-lg cursor-pointer hover:bg-orange-500 transition-colors duration-200 mb-2;
+    }
+
+
+
+    .todo{
+        @apply bg-gradient-to-tl to-[#F29C94] via-white from-white min-h-screen flex flex-col items-center justify-center;
+    }
+    .todo-container{
+        @apply w-2/3
+    }
+    .todo-container h1{
+        @apply text-3xl font-extrabold mb-6 text-black bg-clip-text
+    }
+    .todo-container div{
+        @apply flex mb-6
+    }
+    .todo-container input{
+        @apply flex-1 p-3 border-2 border-gray-300 bg-white rounded-xl outline-none focus:ring-2 focus:ring-pink-400 text-lg w-full mr-3
+    }
+    .todo-container div{
+        @apply flex
+    }
+    .todo-container div button{
+        @apply text-white bg-black px-6 py-2 rounded-xl font-semibold shadow hover:scale-105 transition-transform duration-150
+    }
+    .todo-container ul{
+        @apply space-y-3 mb-2
+    }
+    .todo-container ul div{
+        @apply gap-x-2
+    }
+
 }
+
+
 
 @media (max-width: 900px) {
     .calculator-container {
@@ -48,7 +168,95 @@
     .calc-btn {
         @apply h-10 text-[1rem];
     }
+
+
+    .clock {
+        @apply h-screen px-2 pt-8 pb-8;
+    }
+    .clock h1 {
+        @apply text-3xl tracking-[18px];
+    }
+    .clock section {
+        @apply gap-4 flex-wrap;
+    }
+    .clock div {
+        @apply w-[140px] mt-4;
+    }
+    .clock div span:first-of-type {
+        @apply h-20 text-5xl;
+    }
+    .clock div span:last-of-type {
+        @apply h-8 text-lg;
+    }
+
+
+    .countdown {
+        @apply h-screen px-2 pt-8 pb-8;
+    }
+    .countdown h1 {
+        @apply text-3xl tracking-[18px];
+    }
+    .countdown section {
+        @apply gap-4 grid-cols-4;
+    }
+    .countdown section div {
+        @apply w-[120px] mt-4;
+    }
+    .countdown span:first-of-type {
+        @apply h-8 text-sm;
+    }
+    .countdown span:last-of-type {
+        @apply h-16 text-5xl;
+    }
+    .countdown article {
+        @apply px-2 gap-x-4;
+    }
+    .countdown article h2 {
+        @apply text-base;
+    }
+    .countdown input {
+        @apply p-1;
+    }
+    .countdown button {
+        @apply px-4 py-1;
+    }
+
+    .converter-container {
+        @apply w-[80vw] min-w-[280px] flex gap-y-6 pt-4 px-2 pb-2;
+    }
+    .converter-container h1 {
+        @apply text-3xl mb-4;
+    }
+    .converter-container h2 {
+        @apply text-2xl ;
+    }
+    .converter-container input {
+        @apply h-8 text-base px-2 mb-3;
+    }
+    .converter-container button {
+        @apply h-8 text-base mb-3;
+    }
+    .converter-container div {
+        @apply m-2 text-base;
+    }
+    
+
+    .todo-container {
+        @apply w-[90vw];
+    }
+    .todo-container h1 {
+        @apply text-2xl mb-4;
+    }
+    .todo-container input {
+        @apply text-base p-2 mr-2;
+    }
+    .todo-container div button {
+        @apply px-4 py-2;
+    }
+
 }
+
+
 
 @media (max-width: 600px) {
     .calculator-container {
@@ -65,5 +273,103 @@
     }
     .calc-btn {
         @apply h-8 text-[0.95rem] mx-1 rounded-lg;
+    }
+
+
+    .clock {
+        @apply h-screen px-1 pt-4 pb-4;
+    }
+    .clock h1 {
+        @apply text-lg tracking-[6px];
+    }
+    .clock section {
+        @apply gap-2  gap-x-4 flex-col grid grid-cols-2 justify-items-center;
+    }
+    .clock article{
+        @apply gap-y-2 flex flex-col items-start;
+    }
+    .clock div {
+        @apply w-[120px] mt-2 ;
+    }
+    .clock div span:first-of-type {
+        @apply h-12 text-3xl;
+    }
+    .clock div span:last-of-type {
+        @apply h-8 text-sm;
+    }
+
+
+    .countdown {
+        @apply h-screen px-1 pt-4 pb-4;
+    }
+    .countdown h1 {
+        @apply text-lg tracking-[6px];
+    }
+    .countdown section {
+        @apply gap-2 gap-x-4 grid-cols-2;
+    }
+    .countdown section div {
+        @apply w-[100px] mt-2;
+    }
+    .countdown span:first-of-type {
+        @apply h-6 text-xs;
+    }
+    .countdown span:last-of-type {
+        @apply h-12 text-2xl;
+    }
+    .countdown article {
+        @apply px-1 gap-x-2 flex-col gap-y-2;
+    }
+    .countdown article h2 {
+        @apply text-sm;
+    }
+    .countdown input {
+        @apply p-1 text-sm;
+    }
+    .countdown button {
+        @apply px-3 py-1 text-sm;
+    }
+
+
+    .converter-container {
+        @apply w-[80vw] mt-8 mx-auto p-2 px-1 pb-2 rounded-lg;
+    }
+    .converter-container h1 {
+        @apply text-xl font-bold mb-3;
+    }
+    .converter-container h2 {
+        @apply text-sm font-semibold;
+    }
+    .converter-container div {
+        @apply w-[80vw] p-3 text-sm;
+    }
+    .converter-container section{
+        @apply flex flex-row gap-x-2 mt-2
+    }
+    .converter-container input {
+        @apply h-12 text-sm mb-2;
+    }
+    .converter-container button {
+        @apply h-12 text-sm mb-2;
+    }
+    .converter-container div {
+        @apply m-1 text-sm;
+    }
+
+
+    .todo-container {
+        @apply w-[90vw];
+    }
+    .todo-container h1 {
+        @apply text-xl mb-3;
+    }
+    .todo-container input {
+        @apply text-sm p-1 mr-1;
+    }
+    .todo-container li button {
+        @apply p-2 flex justify-center
+    }
+    .todo-container li div{
+        @apply flex flex-col gap-y-2
     }
 }
