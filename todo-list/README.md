@@ -18,6 +18,6 @@ A simple to-do list application for managing tasks.
 
 ![To-Do List Screenshot](../projects-img/todo.png)
 
-## Deployed Portfolio Link
+## Deployed Link
 
-[Your Portfolio Link]()
+[https://vo-todo-application.vercel.app/]()

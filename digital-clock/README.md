@@ -17,6 +17,6 @@ A real-time digital clock application displaying the current time and date.
 
 ![Digital Clock Screenshot](../projects-img/clock.png)
 
-## Deployed Portfolio Link
+## Deployed Link
 
-[Your Portfolio Link]()
+[https://vo-digital-clock.vercel.app/]()

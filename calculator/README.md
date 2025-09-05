@@ -18,6 +18,6 @@ A simple calculator application built with HTML, CSS, and JavaScript.
 
 ![Calculator Screenshot](../projects-img/calc.jpeg)
 
-## Deployed Portfolio Link
+## Deployed Link
 
-[Your Portfolio Link]()
+[https://vo-calculator.vercel.app/]()

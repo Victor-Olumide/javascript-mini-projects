@@ -1,3 +1,4 @@
+
 # javascript-mini-projects
 
 This repository contains various JavaScript mini projects:
@@ -13,32 +14,38 @@ This repository contains various JavaScript mini projects:
 - `calculator/`
   - `index.html` - The main HTML file for the calculator UI.
   - `calculator.js` - JavaScript logic for calculator operations and input handling.
-  - `output.css` - Compiled CSS.
+  - `output.css` - Compiled CSS for calculator.
   - `README.md` - Project documentation.
+  - `VO_new logo.ico` - Project icon.
 - `countdown-timer/`
-  - `index.html` - Main HTML file.
+  - `index.html` - Main HTML file for countdown timer.
   - `countdown.js` - JavaScript logic for timer functionality.
-  - `output.css` - Compiled CSS.
+  - `output.css` - Compiled CSS for countdown timer.
   - `README.md` - Project documentation.
+  - `VO_new logo.ico` - Project icon.
 - `digital-clock/`
-  - `index.html` - Main HTML file.
+  - `index.html` - Main HTML file for digital clock.
   - `clock.js` - JavaScript logic for clock display.
-  - `output.css` - Compiled CSS.
+  - `output.css` - Compiled CSS for digital clock.
   - `README.md` - Project documentation.
+  - `VO_new logo.ico` - Project icon.
 - `roman-numeral-converter/`
-  - `index.html` - Main HTML file.
+  - `index.html` - Main HTML file for roman numeral converter.
   - `converter.js` - JavaScript logic for conversions.
-  - `output.css` - Compiled CSS.
+  - `output.css` - Compiled CSS for roman numeral converter.
   - `README.md` - Project documentation.
+  - `VO_new logo.ico` - Project icon.
 - `todo-list/`
-  - `index.html` - Main HTML file.
+  - `index.html` - Main HTML file for to-do list.
   - `todo.js` - JavaScript logic for task management.
-  - `output.css` - Compiled CSS.
+  - `output.css` - Compiled CSS for to-do list.
   - `README.md` - Project documentation.
-- `input.css` - Styles for input elements.
-- `output.css` - Compiled CSS output.
-- `README.md` - Project documentation.
-- `projects-img/` - Folder containing project screenshots.
+  - `VO_new logo.ico` - Project icon.
+- `projects-img/` - Folder containing project screenshots:
+  - `calc.jpeg`, `clock.png`, `countdown.png`, `covert.jpeg`, `todo.png`
+- `input.css` - Styles for input elements (global).
+- `output.css` - Compiled CSS output (global).
+- `README.md` - Main project documentation.
 
 ## Scripts
 

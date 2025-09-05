@@ -18,6 +18,6 @@ A countdown timer application that allows users to set a future date and time an
 
 ![Countdown Timer Screenshot](../projects-img/countdown.png)
 
-## Deployed Portfolio Link
+## Deployed Link
 
-[Your Portfolio Link]()
+[https://vo-countdown-timer.vercel.app/]()
