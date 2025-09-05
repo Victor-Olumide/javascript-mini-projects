@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roman Numeral Converter</title>
+    <link rel="stylesheet" href="./output.css">
+</head>
+
+<body class="converter">
+    <main class="converter-container">
+        <h1>Roman Numeral Converter</h1>
+
+        <div>
+            <h2>Number to Roman</h2>
+            <section>
+                <input type="number" min="1" max="3999" placeholder="Enter number (1-3999)" id="numberInput">
+                <button id="toRomanButton">Convert to Roman</button>
+            </section>
+            <p id="romanResult"></p>
+        </div>
+
+        <div>
+            <h2>Roman to Number</h2>
+            <section>
+                <input type="text" placeholder="Enter Roman numeral" id="romanInput">
+                <button id="toNumberButton">Convert to Number</button>
+            </section>
+            <p id="numberResult"></p>
+    </main>
+    <script src="./converter.js"></script>
+</body>
+
+</html>
