@@ -52,15 +52,15 @@ This repository contains various JavaScript mini projects:
 ![Calculator Screenshot](./projects-img/calc.jpeg)
 
 ### Countdown Timer
-![Countdown Timer Screenshot](./projects-img/countdown.jpeg)
+![Countdown Timer Screenshot](./projects-img/countdown.png)
 
 ### Digital Clock
-![Digital Clock Screenshot](./projects-img/clock.jpeg)
+![Digital Clock Screenshot](./projects-img/clock.png)
 
 ### Roman Numeral Converter
-![Roman Numeral Converter Screenshot](./projects-img/clock.jpeg)
+![Roman Numeral Converter Screenshot](./projects-img/covert.jpeg)
 
 ### To-Do List
-![To-Do List Screenshot](./projects-img/clock.jpeg)
+![To-Do List Screenshot](./projects-img/todo.png)
 
 Additional projects and features will be added over time. For detailed setup instructions, features, and usage, refer to each project's individual README.md file.
